@@ -9,5 +9,5 @@ RUN cd /guessit-rest && python3 setup.py install
 
 WORKDIR ${WRKDIR}
 
-CMD python3 __main__.py
+CMD python3 __main__.py -p 8080
 
