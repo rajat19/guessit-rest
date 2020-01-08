@@ -5,11 +5,9 @@ ENV WRKDIR /guessit-rest/guessitrest
 ENV UWSGI_INI /guessit-rest/guessitrest/uwsgi.ini
 
 COPY / /guessit-rest
-RUN cd /guessit-rest && pip3 install -e .
+RUN cd /guessit-rest && python3 setup.py install
 
 WORKDIR ${WRKDIR}
-
-RUN python3 setup.py install
 
 CMD python3 __main__.py
 
